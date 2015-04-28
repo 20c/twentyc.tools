@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='twentyc.tools',
-    version='0.1.2',
+    version='0.1.4',
     author='Twentieth Century',
     author_email='code@20c.com',
     description='various python tool libraries / helpers',
