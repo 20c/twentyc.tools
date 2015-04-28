@@ -1,9 +1,11 @@
-
 from setuptools import setup
+
+version = open('config/VERSION').read().strip()
+requirements = open('config/requirements.txt').read().split("\n")
 
 setup(
     name='twentyc.tools',
-    version='0.1.4',
+    version=version,
     author='Twentieth Century',
     author_email='code@20c.com',
     description='various python tool libraries / helpers',
@@ -14,14 +16,9 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     url='https://github.com/20c/twentyc.tools',
-    download_url='https://github.com/20c/twentyc.tools/tarball/0.1.2',
+    download_url='https://github.com/20c/twentyc.tools/tarball/%s'%version,
     packages=['twentyc.tools'],
-    install_requires=[
-      "Markdown==2.5.2",
-      "prettytable==0.7.2",
-      "python-daemon==1.6",
-      "unittest2==0.8.0"
-    ],
+    install_requires=requirements,
     namespace_packages=['twentyc'],
     zip_safe=False
 )
