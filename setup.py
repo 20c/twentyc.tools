@@ -16,7 +16,12 @@ setup(
     url='https://github.com/20c/twentyc.tools',
     download_url='https://github.com/20c/twentyc.tools/tarball/0.1.2',
     packages=['twentyc.tools'],
-    install_requires=open("requirements.txt").read().split("\n"),
+    install_requires=[
+      "Markdown==2.5.2",
+      "prettytable==0.7.2",
+      "python-daemon==1.6",
+      "unittest2==0.8.0"
+    ],
     namespace_packages=['twentyc'],
     zip_safe=False
 )
